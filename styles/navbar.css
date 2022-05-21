@@ -1,0 +1,49 @@
+* {
+    /* roboto font family */
+    font-family: 'Roboto', sans-serif;
+
+}
+.background-image {
+    position: absolute;
+background-repeat: repeat;
+background-size: cover;
+height: 100%;
+width: 100%;
+}
+.contact-container {
+    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    grid-template-columns: 3fr 1fr;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    /* blur background filter */
+
+backdrop-filter: blur(10px);
+
+}
+
+.logo {
+    display: flex;
+    height: 50px;
+    width: 50px;
+}
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-column-gap: space-between;
+
+}
+
+li{
+    list-style-type: none;
+
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
