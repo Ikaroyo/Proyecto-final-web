@@ -1,49 +1,100 @@
+.background-img {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+body {
+  background: rgb(34, 193, 195);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(45, 253, 188, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(45, 253, 188, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(45, 253, 188, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#2dfdbc",GradientType=1);
+
+  background-repeat: repeat;
+  background-size: auto auto;
+
+  margin-top: 100px;
+}
+
 * {
-    /* roboto font family */
-    font-family: 'Roboto', sans-serif;
+  /* roboto font family */
+  font-family: "Roboto", sans-serif;
+}
 
-}
-.background-image {
-    position: absolute;
-background-repeat: repeat;
-background-size: cover;
-height: 100%;
-width: 100%;
-}
 .contact-container {
-    display: grid;
-    position: fixed;
-    top: 0;
-    left: 0;
-    grid-template-columns: 3fr 1fr;
-    height: 80px;
-    width: 100%;
-    align-items: center;
-    /* blur background filter */
+  display: grid;
+  position: fixed;
+  /* grid wrap */
 
-backdrop-filter: blur(10px);
-
+  top: 0;
+  left: 0;
+  grid-template-columns: 2fr 3fr;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  /* blur background filter */
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .logo {
-    display: flex;
-    height: 50px;
-    width: 50px;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
 }
+
 .contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    grid-column-gap: space-between;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-column-gap: space-between;
 }
 
 li{
     list-style-type: none;
-
 }
-a{
-    color: white;
+li>.link-text {
+
+
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.icon-nav {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
     text-decoration: none;
+    text-align: center;
 }
 
+/* media query strong.text-show when screen size is less than 768px */
+@media screen and (max-width: 940px) {
+  .link-text {
+    display: none;
+
+  }
+}
